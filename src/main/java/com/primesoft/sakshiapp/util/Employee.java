@@ -4,22 +4,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-//import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Size;
+
 
 @Entity(name="emp_details")
 public class Employee {
 	
 	@Id
-	@GeneratedValue
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer Id;
 	
 
-	//@Size(min=2, message="Name should have atleast 2 character")
-	@JsonProperty("user_name")
+	@Size(min=2, message="Name should have atleast 2 character")
+	//@JsonProperty("name")
 	private String name;
 	
-	//@JsonProperty("sal")
+	//@JsonProperty("salary")
 	private Float salary;
 	public Employee() {
 		

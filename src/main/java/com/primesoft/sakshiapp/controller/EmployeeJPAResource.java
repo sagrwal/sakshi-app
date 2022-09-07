@@ -19,12 +19,12 @@ import com.primesoft.sakshiapp.util.Employee;
 
 
 @RestController
-public class EmployeeResource {
+public class EmployeeJPAResource {
 	
 	
 	private EmployeeRepository repository;
 
-	public EmployeeResource(EmployeeRepository repository) {
+	public EmployeeJPAResource(EmployeeRepository repository) {
 		
 		this.repository = repository;
 	}
